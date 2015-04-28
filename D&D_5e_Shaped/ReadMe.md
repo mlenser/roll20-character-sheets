@@ -24,6 +24,12 @@ This is a character sheet for use on Roll20.net with the latest (5th) edition of
 
 ### Changelog
 
+
+**28th April 2015**
+
+* Added tooltips for ability and skill checks (Rouby)
+
+
 **24th April 2015**
 
 * Added spell slots to the Core page

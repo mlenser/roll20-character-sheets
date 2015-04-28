@@ -212,6 +212,10 @@ div.sheet-overall-wrapper [class *= "sheet-npc-version"] {
   width: 140px;
   margin-top: -15px;
 }
+.sheet-tooltip-big [class*="sheet-tooltip-content"] {
+  width: 270px;
+  padding: 6px;
+}
 .sheet-tooltip .sheet-tooltip-content-left {
   right: 100%;
   margin-right: 15px;
@@ -239,8 +243,27 @@ div.sheet-overall-wrapper [class *= "sheet-npc-version"] {
   border-right: 8px solid #000000;
 }
 
+.sheet-tooltip-ul {
+  margin: 0 0 0 20px;
+}
+
+.sheet-tooltip-li {
+  margin: 0 0 0 20px;
+  font-size: 11px!important;
+  line-height: 14px!important;
+  letter-spacing: normal;
+}
+
+.sheet-tooltip-p {
+  font-size: 13px!important;
+  line-height: 14px!important;
+  letter-spacing: normal;
+}
+
 [class="sheet-tooltip"]:hover [class*="sheet-tooltip-content"],
-[class="sheet-tooltip"]:focus [class*="sheet-tooltip-content"] {
+[class="sheet-tooltip"]:focus [class*="sheet-tooltip-content"],
+[class="sheet-tooltip sheet-tooltip-big"]:hover [class*="sheet-tooltip-content"],
+[class="sheet-tooltip sheet-tooltip-big"]:focus [class*="sheet-tooltip-content"] {
   visibility: visible;
   z-index: 999;
 }
