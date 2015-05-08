@@ -1718,8 +1718,14 @@
                   </div>
                 </div>
                 <div class="sheet-wrap-box-title">
-                  <div>Armor</div>
-                  <div>Class</div>
+                  <div>
+                    <span class="sheet-english">Armor</span>
+                    <span class="sheet-german">Rüstungs</span>
+                  </div>
+                  <div>
+                    <span class="sheet-english">Class</span>
+                    <span class="sheet-german">Klasse</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1734,13 +1740,19 @@
                   </div>
                 </div>
                 <button type="roll" name="roll_Initiative" value="@{output_option} &{template:5eDefault} {{title=Initiative}} {{subheader=@{character_name}}} {{rollname=Initiative}} {{roll=[[ d20 + @{initiative_tie_breaker} [Tie Breaker] + @{intiaitive_to_tracker}]]}} @{classactioninitiative}"></button>
-                <div class="sheet-wrap-box-title">Initiative</div>
+                <div class="sheet-wrap-box-title">
+                  <span class="sheet-english">Initiative</span>
+                  <span class="sheet-german">Initiative</span>
+                </div>
               </div>
             </div>
             <div class="sheet-col-7-24 sheet-center sheet-pad-l-md">
               <div class="sheet-wrap-box sheet-speed">
                 <input class="sheet-center sheet-mar-t-lg" type="text" name="attr_speed">
-                <div class="sheet-wrap-box-title">Speed</div>
+                <div class="sheet-wrap-box-title">
+                  <span class="sheet-english">Speed</span>
+                  <span class="sheet-german">Geschw.</span>
+                </div>
               </div>
             </div>
           </div>
@@ -1750,23 +1762,38 @@
                 <div class="sheet-row sheet-pad-t-md">
                   <div class="sheet-col-1-3 sheet-vert-middle sheet-pad-r-lg">
                     <input class="sheet-no-spin sheet-heart-hp-current" type="number" name="attr_HP" step="1">
-                    <div class="sheet-small-label">Current</div>
+                    <div class="sheet-small-label">
+                      <span class="sheet-english">Current</span>
+                      <span class="sheet-german">Aktuell</span>
+                    </div>
                   </div>
                   <div class="sheet-col-1-9 sheet-vert-bottom">&#47;</div>
                   <div class="sheet-col-1-3 sheet-vert-middle sheet-pad-l-lg">
                     <input class="sheet-no-spin sheet-heart-hp-max" type="number" name="attr_HP_max" min="1" step="1">
-                    <div class="sheet-small-label">Max</div>
+                    <div class="sheet-small-label">
+                      <span class="sheet-english">Max</span>
+                      <span class="sheet-german">Max</span>
+                    </div>
                   </div>
                 </div>
                 <div class="sheet-row">
                   <div class="sheet-col-1-3">
                     <input class="sheet-no-spin sheet-heart-hp-temp" type="number" name="attr_temp_HP" min="0" step="1">
-                    <div class="sheet-small-label">Temp</div>
+                    <div class="sheet-small-label">
+                      <span class="sheet-english">Temp</span>
+                      <span class="sheet-german">Temp</span>
+                    </div>
                   </div>
                 </div>
                 <div class="sheet-wrap-box-title">
-                  <div>Hit</div>
-                  <div>Points</div>
+                  <div>
+                    <span class="sheet-english">Hit</span>
+                    <span class="sheet-german">Treffer</span>
+                  </div>
+                  <div>
+                    <span class="sheet-english">Points</span>
+                    <span class="sheet-german">Punkte</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1777,13 +1804,25 @@
                 <div class="sheet-row sheet-npc-version sheet-mar-b-md">
                   <div class="sheet-col-1-2">
                     <input class="sheet-center" type="text" name="attr_npc_HP_hit_dice">
-                    <div class="sheet-small-label">HD Note</div>
+                    <div class="sheet-small-label">
+                      <span class="sheet-english">HD-Note</span>
+                      <span class="sheet-german">TW-Notiz</span>
+                    </div>
                   </div>
                 </div>
                 <div class="sheet-row sheet-sub-header">
-                  <div class="sheet-col-1-4 sheet-center sheet-small-label sheet-sub-header sheet-pad-r-sm">Current</div>
-                  <div class="sheet-col-1-4 sheet-center sheet-small-label sheet-sub-header">Max</div>
-                  <div class="sheet-col-3-10 sheet-center sheet-small-label sheet-sub-header">Hit Die</div>
+                  <div class="sheet-col-1-4 sheet-center sheet-small-label sheet-sub-header sheet-pad-r-sm">
+                    <span class="sheet-english">Current</span>
+                    <span class="sheet-german">Aktuell</span>
+                  </div>
+                  <div class="sheet-col-1-4 sheet-center sheet-small-label sheet-sub-header">
+                    <span class="sheet-english">Max</span>
+                    <span class="sheet-german">Max</span>
+                  </div>
+                  <div class="sheet-col-3-10 sheet-center sheet-small-label sheet-sub-header">
+                    <span class="sheet-english">Hit Die</span>
+                    <span class="sheet-german">Trefferwürfel</span>
+                  </div>
                 </div>
                 <div class="sheet-row sheet-npc-version">
                   <div class="sheet-col-1-4 sheet-vert-middle sheet-pad-r-sm">
@@ -1930,13 +1969,22 @@
                   <div class="sheet-col-3-10 sheet-center">
                     <button type="roll" class="sheet-roll" name="roll_Death_Saving_Throw" value="@{death_save_output_option} @{output_option} &{template:5eDefault} {{deathsave=1}} {{character_name=@{character_name}}} {{emote=dices with death!}} {{title=Death Save}} {{subheader=@{character_name}}} {{rollname=Death save}} {{roll=[[d20 + (@{global_saving_bonus})]]}} @{classactiondeathsave} ">
                           <span class="sheet-wrap-box-title">
-                            <div>Death</div>
-                            <div>Save</div>
+                            <div>
+                              <span class="sheet-english">Death</span>
+                              <span class="sheet-german">Todes</span>
+                            </div>
+                            <div>
+                              <span class="sheet-english">Save</span>
+                              <span class="sheet-german">Rettung</span>
+                            </div>
                           </span>
                     </button>
                   </div>
                 </div>
-                <div class="sheet-wrap-box-title">Death Saves</div>
+                <div class="sheet-wrap-box-title">
+                  <span class="sheet-english">Death Saves</span>
+                  <span class="sheet-german">Todesrettungswürfe</span>
+                </div>
               </div>
             </div>
           </div>
@@ -1946,7 +1994,10 @@
                 <div class="sheet-col-1 sheet-vert-middle">
                   <textarea name="attr_npc_traits"></textarea>
                 </div>
-                <div class="sheet-wrap-box-title sheet-center">Traits</div>
+                <div class="sheet-wrap-box-title sheet-center">
+                  <span class="sheet-english">Traits</span>
+                  <span class="sheet-german">Merkmale</span>
+                </div>
               </div>
             </div>
           </div>
@@ -1961,7 +2012,10 @@
                     <span></span>
                   </label>
                 </div>
-                <span class="sheet-wrap-box-title">Inspiration</span>
+                <span class="sheet-wrap-box-title">
+                  <span class="sheet-english">Inspiration</span>
+                  <span class="sheet-german">Inspiration</span>
+                </span>
               </div>
             </div>
           </div>
@@ -1971,7 +2025,10 @@
                 <div class="sheet-col-1-4 sheet-vert-middle">
                   <input type="number" name="attr_exhaustion_level" min="0" max="6">
                 </div>
-                <span class="sheet-wrap-box-title">Exhaustion Level</span>
+                <span class="sheet-wrap-box-title">
+                  <span class="sheet-english">Exhaustion Level</span>
+                  <span class="sheet-german">Erschöpfungsstufe</span>
+                </span>
                 <div class="sheet-tooltip-postion-wrapper">
                   <div class="sheet-tooltip">
                     <div class="sheet-tooltip-toggle-text sheet-center">?</div>
@@ -1979,34 +2036,58 @@
                       <table>
                         <thead>
                           <tr>
-                            <th>Level</th>
-                            <th>Effect</th>
+                            <th>
+                              <span class="sheet-english">Level</span>
+                              <span class="sheet-german">Stufe</span>
+                            </th>
+                            <th>
+                              <span class="sheet-english">Effect</span>
+                              <span class="sheet-german">Effekt</span>
+                            </th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
                             <td class="sheet-center">1</td>
-                            <td>Disadvantage on ability checks</td>
+                            <td>
+                              <span class="sheet-english">Disadvantage on ability checks</span>
+                              <span class="sheet-german">Nachteil auf Fähigkeits-Checks</span>
+                            </td>
                           </tr>
                           <tr>
                             <td class="sheet-center">2</td>
-                            <td>Speed halved</td>
+                            <td>
+                              <span class="sheet-english">Speed halved</span>
+                              <span class="sheet-german">Geschwindigkeit halbiert</span>
+                            </td>
                           </tr>
                           <tr>
                             <td class="sheet-center">3</td>
-                            <td>Disadvantage on attack rolls and saving throws</td>
+                            <td>
+                              <span class="sheet-english">Disadvantage on attack rolls and saving throws</span>
+                              <span class="sheet-german">Nachteil auf Angriffs- und Rettungswürfe</span>
+                            </td>
                           </tr>
                           <tr>
                             <td class="sheet-center">4</td>
-                            <td>Hit point maximum halved</td>
+                            <td>
+                              <span class="sheet-english">Hit point maximum halved</span>
+                              <span class="sheet-german">Maximale Trefferpunkte halbiert</span>
+                            </td>
                           </tr>
                           <tr>
                             <td class="sheet-center">5</td>
-                            <td>Speed reduced to 0</td>
+                            <td>
+                              <span class="sheet-english">Speed reduced to 0</span>
+                              <span class="sheet-german">Geschwindigkeit auf 0 reduziert</span>
+                            </td>
                           </tr>
                           <tr>
                             <td class="sheet-center">6</td>
-                            <td>Death</td>
+                            <td>
+                              <span class="sheet-english">Death</span>
+                              <span class="sheet-german">Tod</span>
+                            </td>
                           </tr>
                         </tbody>
                       </table>
@@ -2050,7 +2131,10 @@
                   <input class="sheet-no-spin" type="number" name="attr_PB" value="(2 + floor(abs((@{level}-1)/4)))" disabled="disabled">
                   <input type="hidden" name="attr_exp" value="(2*@{PB})" disabled="disabled">
                 </div>
-                <span class="sheet-wrap-box-title">Proficiency Bonus</span>
+                <span class="sheet-wrap-box-title">
+                  <span class="sheet-english">Proficiency Bonus</span>
+                  <span class="sheet-german">Tod</span>
+                </span>
               </div>
             </div>
           </div>
@@ -2058,14 +2142,22 @@
             <div class="sheet-col-1">
               <div class="sheet-wrap-box" title="Quick Spell Slots">
                 <div class="sheet-row sheet-sub-header">
-                  <div class="sheet-col-1-3 sheet-center sheet-small-label sheet-sub-header">Level</div>
-                  <div class="sheet-col-1-3 sheet-center sheet-small-label sheet-sub-header sheet-pad-r-sm">Current</div>
-                  <div class="sheet-col-1-3 sheet-center sheet-small-label sheet-sub-header">Max</div>
+                  <div class="sheet-col-1-3 sheet-center sheet-small-label sheet-sub-header">
+                    <span class="sheet-english">Level</span>
+                    <span class="sheet-german">Stufe</span>
+                  </div>
+                  <div class="sheet-col-1-3 sheet-center sheet-small-label sheet-sub-header sheet-pad-r-sm">
+                    <span class="sheet-english">Current</span>
+                    <span class="sheet-german">Aktuell</span>
+                  </div>
+                  <div class="sheet-col-1-3 sheet-center sheet-small-label sheet-sub-header">
+                    <span class="sheet-english">Max</span>
+                    <span class="sheet-german">Max</span>
+                  </div>
                 </div>
                 <div class="sheet-row sheet">
                   <div class="sheet-col-1-3 sheet-center sheet-small-label sheet-vert-middle">
                     <span>1</span>
-                    </span>
                   </div>
                   <div class="sheet-col-1-3 sheet-pad-r-sm">
                     <input type="number" name="attr_spell_slots_l1" value="0">
@@ -2162,7 +2254,10 @@
                     <input class="sheet-center sheet-pseudo-disabled sheet-no-spin" type="number" name="attr_spell_slots_l9_max" value="0" min="0">
                   </div>
                 </div>
-                <div class="sheet-wrap-box-title sheet-center">Spell Slots</div>
+                <div class="sheet-wrap-box-title sheet-center">
+                  <span class="sheet-english">Spell Slots</span>
+                  <span class="sheet-german">Zauber-Slots</span>
+                </div>
               </div>
             </div>
           </div>
@@ -2172,28 +2267,43 @@
                 <div class="sheet-row">
                   <div class="sheet-col-1">
                     <textarea name="attr_damage_vulnerability"></textarea>
-                    <div class="sheet-small-label">Damage Vulnerabilities</div>
+                    <div class="sheet-small-label">
+                      <span class="sheet-english">Damage Vulnerabilities</span>
+                      <span class="sheet-german">Schadens-Empfindlichkeiten</span>
+                    </div>
                   </div>
                 </div>
                 <div class="sheet-row">
                   <div class="sheet-col-1">
                     <textarea name="attr_damage_resistance"></textarea>
-                    <div class="sheet-small-label">Damage Resistances</div>
+                    <div class="sheet-small-label">
+                      <span class="sheet-english">Damage Resistances</span>
+                      <span class="sheet-german">Schadens-Resistenzen</span>
+                    </div>
                   </div>
                 </div>
                 <div class="sheet-row">
                   <div class="sheet-col-1">
                     <textarea name="attr_damage_immunity"></textarea>
-                    <div class="sheet-small-label">Damage Immunities</div>
+                    <div class="sheet-small-label">
+                      <span class="sheet-english">Damage Immunities</span>
+                      <span class="sheet-german">Schadens-Immunitäten</span>
+                    </div>
                   </div>
                 </div>
                 <div class="sheet-row">
                   <div class="sheet-col-1">
                     <textarea name="attr_condition_immunity"></textarea>
-                    <div class="sheet-small-label">Condition Immunities</div>
+                    <div class="sheet-small-label">
+                      <span class="sheet-english">Condition Immunities</span>
+                      <span class="sheet-german">Status-Immunitäten</span>
+                    </div>
                   </div>
                 </div>
-                <div class="sheet-wrap-box-title sheet-center">Resistances & Immunities</div>
+                <div class="sheet-wrap-box-title sheet-center">
+                  <span class="sheet-english">Resistances & Immunities</span>
+                  <span class="sheet-german">Resistenzen & Immunitäten</span>
+                </div>
               </div>
             </div>
           </div>
@@ -2203,8 +2313,14 @@
             <div class="sheet-col-1">
               <div class="sheet-wrap-box" title="Quick Attacks">
                 <div class="sheet-row sheet-sub-header">
-                  <div class="sheet-col-7-10 sheet-center sheet-small-label sheet-sub-header">Melee</div>
-                  <div class="sheet-col-1-5 sheet-center sheet-small-label sheet-sub-header">Reach</div>
+                  <div class="sheet-col-7-10 sheet-center sheet-small-label sheet-sub-header">
+                    <span class="sheet-english">Melee</span>
+                    <span class="sheet-german">Nahkampf</span>
+                  </div>
+                  <div class="sheet-col-1-5 sheet-center sheet-small-label sheet-sub-header">
+                    <span class="sheet-english">Reach</span>
+                    <span class="sheet-german">Reichweite</span>
+                  </div>
                 </div>
                 <div class="sheet-row">
                   <div class="sheet-col-7-10 sheet-vert-middle sheet-pad-r-sm">
@@ -2273,9 +2389,18 @@
                   </div>
                 </div>
                 <div class="sheet-row sheet-sub-header">
-                  <div class="sheet-col-3-8 sheet-center sheet-small-label sheet-sub-header">Ranged</div>
-                  <div class="sheet-col-1-4 sheet-center sheet-small-label sheet-sub-header">Range</div>
-                  <div class="sheet-col-1-4 sheet-center sheet-small-label sheet-sub-header">Ammo</div>
+                  <div class="sheet-col-3-8 sheet-center sheet-small-label sheet-sub-header">
+                    <span class="sheet-english">Ranged</span>
+                    <span class="sheet-german">Fernkampf</span>
+                  </div>
+                  <div class="sheet-col-1-4 sheet-center sheet-small-label sheet-sub-header">
+                    <span class="sheet-english">Range</span>
+                    <span class="sheet-german">Reichweite</span>
+                  </div>
+                  <div class="sheet-col-1-4 sheet-center sheet-small-label sheet-sub-header">
+                    <span class="sheet-english">Ammo</span>
+                    <span class="sheet-german">Mun.</span>
+                  </div>
                 </div>
                 <div class="sheet-row">
                   <div class="sheet-col-7-20 sheet-vert-middle sheet-pad-r-sm">
@@ -2361,7 +2486,10 @@
                     <button type="roll" class="sheet-roll" value="@{roll_RangedAttack6}"></button>
                   </div>
                 </div>
-                <div class="sheet-wrap-box-title sheet-center">Quick Attacks</div>
+                <div class="sheet-wrap-box-title sheet-center">
+                  <span class="sheet-english">Quick Attacks</span>
+                  <span class="sheet-german">Schnell Angriffe</span>
+                </div>
               </div>
             </div>
           </div>
@@ -2371,62 +2499,107 @@
                 <div class="sheet-tooltip-postion-wrapper">
                   <div class="sheet-tooltip">
                     <div class="sheet-tooltip-toggle-text sheet-center">?</div>
-                    <div class="sheet-tooltip-content-left sheet-small-label">Auto add a bonus/penalty to rolls made using the sheet macros.<br>Usage: you acquire a magic item that gives +1 to your spell save DC, enter 1 in the spell save DC field. You are under the effects of the Bless spell, enter d4 in both attack roll fields, and the saving throw one</div>
+                    <div class="sheet-tooltip-content-left sheet-small-label">
+                      <span class="sheet-english">Auto add a bonus/penalty to rolls made using the sheet macros.<br>Usage: you acquire a magic item that gives +1 to your spell save DC, enter 1 in the spell save DC field. You are under the effects of the Bless spell, enter d4 in both attack roll fields, and the saving throw one</span>
+                      <span class="sheet-german">TODO-DESC</span>
+                    </div>
                   </div>
                 </div>
                 <div class="sheet-row sheet-sub-header">
-                  <div class="sheet-col-1-2 sheet-center sheet-small-label sheet-sub-header">Melee</div>
-                  <div class="sheet-col-1-2 sheet-center sheet-small-label sheet-sub-header">Ranged</div>
+                  <div class="sheet-col-1-2 sheet-center sheet-small-label sheet-sub-header">
+                    <span class="sheet-english">Melee</span>
+                    <span class="sheet-german">Nahkampf</span>
+                  </div>
+                  <div class="sheet-col-1-2 sheet-center sheet-small-label sheet-sub-header">
+                    <span class="sheet-english">Ranged</span>
+                    <span class="sheet-german">Fernkampf</span>
+                  </div>
                 </div>
                 <div class="sheet-row sheet-mar-b-md">
                   <div class="sheet-col-1-4 sheet-center sheet-pad-r-sm">
                     <input class="sheet-center" type="text" name="attr_global_melee_attack_bonus" value="0">
-                    <div class="sheet-small-label">Attack Rolls</div>
+                    <div class="sheet-small-label">
+                      <span class="sheet-english">Attack Rolls</span>
+                      <span class="sheet-german">Angriffswürfe</span>
+                    </div>
                   </div>
                   <div class="sheet-col-1-4 sheet-center sheet-pad-r-sm">
                     <input class="sheet-center" type="text" name="attr_global_melee_damage_bonus" value="0">
-                    <div class="sheet-small-label">Damage Rolls</div>
+                    <div class="sheet-small-label">
+                      <span class="sheet-english">Damage Rolls</span>
+                      <span class="sheet-german">Schadenswürfe</span>
+                    </div>
                   </div>
                   <div class="sheet-col-1-4 sheet-center sheet-pad-l-sm">
                     <input class="sheet-center" type="text" name="attr_global_ranged_attack_bonus" value="0">
-                    <div class="sheet-small-label">Attack Rolls</div>
+                    <div class="sheet-small-label">
+                      <span class="sheet-english">Attack Rolls</span>
+                      <span class="sheet-german">Angriffswürfe</span>
+                    </div>
                   </div>
                   <div class="sheet-col-1-4 sheet-center sheet-pad-l-sm">
                     <input class="sheet-center" type="text" name="attr_global_ranged_damage_bonus" value="0">
-                    <div class="sheet-small-label">Damage Rolls</div>
+                    <div class="sheet-small-label">
+                      <span class="sheet-english">Damage Rolls</span>
+                      <span class="sheet-german">Schadenswürfe</span>
+                    </div>
                   </div>
                 </div>
                 <div class="sheet-row sheet-sub-header">
-                  <div class="sheet-col-1 sheet-center sheet-small-label sheet-sub-header">Spellcasting</div>
+                  <div class="sheet-col-1 sheet-center sheet-small-label sheet-sub-header">
+                    <span class="sheet-english">Spellcasting</span>
+                    <span class="sheet-german">Zauber</span>
+                  </div>
                 </div>
                 <div class="sheet-row sheet-mar-b-md">
                   <div class="sheet-col-1-3 sheet-center sheet-pad-r-sm">
                     <input class="sheet-center" type="text" name="attr_global_spell_attack_bonus" value="0">
-                    <div class="sheet-small-label">Attack Rolls</div>
+                    <div class="sheet-small-label">
+                      <span class="sheet-english">Attack Rolls</span>
+                      <span class="sheet-german">Angriffswürfe</span>
+                    </div>
                   </div>
                   <div class="sheet-col-1-3 sheet-center">
                     <input class="sheet-center" type="text" name="attr_global_spell_damage_bonus" value="0">
-                    <div class="sheet-small-label">Damage Rolls</div>
+                    <div class="sheet-small-label">
+                      <span class="sheet-english">Damage Rolls</span>
+                      <span class="sheet-german">Schadenswürfe</span>
+                    </div>
                   </div>
                   <div class="sheet-col-1-3 sheet-center sheet-pad-l-sm">
                     <input class="sheet-center" type="text" name="attr_global_spell_dc_bonus" value="0" step="1">
-                    <div class="sheet-small-label">Save DC</div>
+                    <div class="sheet-small-label">
+                      <span class="sheet-english">Save DC</span>
+                      <span class="sheet-german">Rettungs-SG</span>
+                    </div>
                   </div>
                 </div>
                 <div class="sheet-row sheet-sub-header">
-                  <div class="sheet-col-1 sheet-center sheet-small-label sheet-sub-header">Saves and skill checks</div>
+                  <div class="sheet-col-1 sheet-center sheet-small-label sheet-sub-header">
+                    <span class="sheet-english">Saves and skill checks</span>
+                    <span class="sheet-german">Rettungs- und Fähigkeits-Checks</span>
+                  </div>
                 </div>
                 <div class="sheet-row sheet-mar-b-md">
                   <div class="sheet-col-1-2 sheet-center sheet-pad-r-sm">
                     <input class="sheet-center" type="text" name="attr_global_saving_bonus" value="0">
-                    <div class="sheet-small-label">Saving throws</div>
+                    <div class="sheet-small-label">
+                      <span class="sheet-english">Saving throws</span>
+                      <span class="sheet-german">Rettungswürfe</span>
+                    </div>
                   </div>
                   <div class="sheet-col-1-2 sheet-center">
                     <input class="sheet-center" type="text" name="attr_global_check_bonus" value="0">
-                    <div class="sheet-small-label">Ability/Skill Checks</div>
+                    <div class="sheet-small-label">
+                      <span class="sheet-english">Ability/Skill checks</span>
+                      <span class="sheet-german">Fähigkeits-Checks</span>
+                    </div>
                   </div>
                 </div>
-                <div class="sheet-wrap-box-title">Bonuses / Penalties</div>
+                <div class="sheet-wrap-box-title">
+                  <span class="sheet-english">Bonuses / Penalties</span>
+                  <span class="sheet-german">Boni / Mali</span>
+                </div>
               </div>
             </div>
           </div>
