@@ -4,25 +4,47 @@ This is a character sheet for use on Roll20.net with the latest (5th) edition of
 
 ### TODO
 
-* Import Script for Monsters
-* Tablet
-  * -Make initiative work-
-  * Fix Heart positioning (somewhat fixed)
-* Split Traits to repeatable
-* Spell Points
-* Redo weapons based on NPC Actions.
+* Revamp weapons based on Actions.
+* Actions: Allow for "Effects" to be whispered to the GM for
+* Revamp Traits. Keep fluff traits on the first page and for action like traits write "see Actions". Also include fluff traits on "Actions".
 * Consider alternative sheet layout of skills under the stats
-* -Set Proficiency for monsters (See MM 8)- Added April 4th, 2015
-* -Add Passive Perception to the header info- Added April 4th, 2015
-* -Split out senses to multiple fields- Added April 4th, 2015
-* -Add Action type to NPC attacks (Reaction, lair, etc)- Added April 4th, 2015
-* -Health inputs should show 3 digits- Fixed April 5th, 2015
-* -Add Custom Class Support- Added April 5th, 2015
-* -Fix custom classes to add them to the hit dice pool- Added April 5th, 2015
-* -Turn Lair Actions into actual attacks- Added April 5th, 2015
 
 
 ### Changelog
+
+**8th May 2015**
+
+* Added skill passive bonus
+* Cleaned up skills on core sheet
+* Shrunk Prof bonus and Exhaustion level inputs.
+
+**4th May 2015**
+
+* Added Spell Points
+
+**2nd May 2015**
+
+* Weapons revamp v2.
+
+**1st May 2015**
+
+* Attacks: First revision of new weapons has been completed.
+* Show Bonuses / Penalties on the weapon and spell page as well.
+
+
+**30th April 2015**
+
+* Prevented weapons from erroring if the crit damage field did not have a value.
+* Made targetAC work on Actions and Spells
+* Spells can be removed again
+* Spells no longer have a (dis)advantage toggle. All attacks roll the second die.
+* Cleaned up how Actions send data to the roll templates
+* Cleaned up spellbook to show "-" when a class doesn't have cantrips, spells known, or spells prepared
+* Cleaned up roll templates
+
+**29th April 2015**
+
+* Actions: Effects now print out
 
 **28th April 2015**
 
@@ -30,7 +52,6 @@ This is a character sheet for use on Roll20.net with the latest (5th) edition of
 * Added Multilingual support for other users to translate the sheet.
 * Adjusted tooltips so that they can work on plain text. Put them in for Strength and Athletics. I expect many more to be added soon.
 * Added tooltips for basic ability and skill checks.
-
 
 **24th April 2015**
 
