@@ -1221,6 +1221,7 @@ div[class^="sheet-classaction-row"] {
 .sheet-section-actions .sheet-wrap-box textarea {
   font-size: 80%;
   line-height: 100%;
+  resize: vertical;
 }
 
 .sheet-section-actions div[class*="sheet-toggle-"],
