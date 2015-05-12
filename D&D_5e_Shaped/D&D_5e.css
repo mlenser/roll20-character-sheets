@@ -1219,7 +1219,7 @@ div[class^="sheet-classaction-row"] {
 }
 .sheet-section-spellbook .sheet-wrap-box textarea,
 .sheet-section-actions .sheet-wrap-box textarea {
-  font-size: 80%;
+  font-size: 100%;
   line-height: 100%;
   resize: vertical;
 }
