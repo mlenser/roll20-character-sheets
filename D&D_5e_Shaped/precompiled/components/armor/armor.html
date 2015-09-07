@@ -28,3 +28,17 @@
         <option value="0.004">Lourde</option>
       </select>
     </span>
+  </div>
+  <div class="sheet-col-08 sheet-vert-middle sheet-pad-r-sm"><input type="number" name="attr_armormagicbonus{{num}}" value="0" step="1"></div>
+  <div class="sheet-col-08 sheet-vert-middle sheet-pad-r-sm"><input type="number" name="attr_armortotalAC{{num}}" value="@{armorACbase{{num}}}+floor(@{armortype{{num}}})+@{armormagicbonus{{num}}}" disabled="disabled"></div>
+  <div class="sheet-col-10 sheet-center sheet-vert-middle">
+    <input type="checkbox" name="attr_armorstealthpen{{num}}" value="Disadvantage on Stealth">
+  </div>
+  <div class="sheet-col-10 sheet-vert-middle">
+    <select name="attr_armorspeedpen{{num}}">
+      <option value="No" selected>No</option>
+      <option value="If Str &lt; 13">If Str &lt; 13</option>
+      <option value="If Str &lt; 15">If Str &lt; 15</option>
+    </select>
+  </div>
+</div>
