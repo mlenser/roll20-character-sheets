@@ -7,8 +7,8 @@
 
   <fieldset class="repeating_spellbook{{level_num}}">
     <div class="sheet-wrap-box sheet-relative sheet-mar-b-md">
-      <input type="hidden" name="attr_spellbaselevel" value="{{num}}">
-      <input type="hidden" name="attr_higher_level_query" value="{{higherLevelQuery}}">
+    <input type="hidden" name="attr_spellbaselevel" value="{{num}}">
+    <input type="hidden" name="attr_higher_level_query" value="{{higherLevelQuery}}">
 
       <div class="sheet-col-25 sheet-vert-top sheet-pad-r-sm">
         <input type="text" class="sheet-spell-name" name="attr_spellname" placeholder="name">
@@ -28,16 +28,10 @@
         <span class="sheet-de">konzentration</span>
         <span class="sheet-fr">concentration</span>
       </span>
-      <input type="hidden" name="attr_spellcomponents_verbal_var" value="{{spell_components_verbal=1}}">
-      <input type="hidden" name="attr_spellcomponents_somatic_var" value="{{spell_components_somatic=1}}">
       <input type="hidden" name="attr_spellcomponents_material_var" value="{{spell_components_material=@{spellcomponents}}}">
       <input type="checkbox" name="attr_spellcomponents_verbal" class="sheet-toggle-spell-vsm-v" value="@{spellcomponents_verbal_var}"><span class="sheet-toggle-spell-vsm-v">V</span>
       <input type="checkbox" name="attr_spellcomponents_somatic" class="sheet-toggle-spell-vsm-s" value="@{spellcomponents_somatic_var}"><span class="sheet-toggle-spell-vsm-s">S</span>
       <input type="checkbox" name="attr_spellcomponents_material" class="sheet-toggle-spell-vsm-m" value="@{spellcomponents_material_var}"><span class="sheet-toggle-spell-vsm-m">M</span>
-      <input type="hidden" name="attr_spell_casting_time_reaction_var" value="1 reaction">
-      <input type="hidden" name="attr_spell_casting_time_bonus_var" value="1 bonus action">
-      <input type="hidden" name="attr_spell_casting_time_action_var" value="1 action">
-      <input type="hidden" name="attr_spell_casting_time_minute_var" value="1 minute">
       <input type="hidden" name="attr_spell_casting_time_longer_var" value="@{spellcasttime}">
       <input type="radio" name="attr_spell_casting_time" class="sheet-toggle-casting-time-reaction" value="@{spell_casting_time_reaction_var}"><span class="sheet-toggle-casting-time-reaction">reaction</span><input type="radio" name="attr_spell_casting_time" class="sheet-toggle-casting-time-bonus" value="@{spell_casting_time_bonus_var}"><span class="sheet-toggle-casting-time-bonus sheet-border-left">bonus</span><input type="radio" name="attr_spell_casting_time" class="sheet-toggle-casting-time-action" value="@{spell_casting_time_action_var}" checked><span class="sheet-toggle-casting-time-action sheet-border-left">action</span><input type="radio" name="attr_spell_casting_time" class="sheet-toggle-casting-time-minute" value="@{spell_casting_time_minute_var}"><span class="sheet-toggle-casting-time-minute sheet-border-left">1 min</span><input type="radio" name="attr_spell_casting_time" class="sheet-toggle-casting-time-longer" value="@{spell_casting_time_longer_var}"><span class="sheet-toggle-casting-time-longer sheet-border-left">longer</span>
       <div class="sheet-spells-toggle-spell sheet-inline">
@@ -395,7 +389,7 @@
             <input class="sheet-center" type="number" name="attr_spell_to_hit" value="@{PB} + @{attackstat} + (@{spell_attack_bonus} * @{spell_toggle_bonuses})" disabled="disabled">
             <div class="sheet-small-label">To Hit</div>
           </div>
-          <div class="sheet-col-08 sheet-toggle-attack sheet-toggle-damage sheet-center sheet-vert-top sheet-pad-l-sm sheet-pad-r-sm">
+          <div class="sheet-col-08 sheet-toggle-damage sheet-center sheet-vert-top sheet-pad-l-sm sheet-pad-r-sm">
             <input class="sheet-center" type="text" name="attr_spell_attack_dmg" value="0">
             <div class="sheet-small-label">
               <span class="sheet-en">Dmg Dice</span>
@@ -403,7 +397,7 @@
               <span class="sheet-fr">Dés de Dmg</span>
             </div>
           </div>
-          <div class="sheet-col-07 sheet-toggle-attack sheet-toggle-damage sheet-center sheet-vert-top sheet-pad-r-sm">
+          <div class="sheet-col-07 sheet-toggle-damage sheet-center sheet-vert-top sheet-pad-r-sm">
             <select name="attr_spell_attack_dmg_stat" class="sheet-select-no-arrow">
               <option value="0" selected>&#8212;</option>
               <option value="@{casting_stat}">Casting Stat</option>
@@ -418,15 +412,15 @@
             </select>
             <div class="sheet-small-label">Dmg Stat</div>
           </div>
-          <div class="sheet-col-04 sheet-toggle-attack sheet-toggle-damage sheet-toggle-bonuses sheet-center sheet-vert-top sheet-pad-r-sm">
+          <div class="sheet-col-04 sheet-toggle-damage sheet-toggle-bonuses sheet-center sheet-vert-top sheet-pad-r-sm">
             <input class="sheet-center" type="number" name="attr_spell_attack_dmg_bonus" value="0">
             <div class="sheet-small-label">+Dmg</div>
           </div>
-          <div class="sheet-col-04 sheet-toggle-attack sheet-toggle-damage sheet-center sheet-vert-top sheet-pad-r-sm">
+          <div class="sheet-col-04 sheet-toggle-damage sheet-center sheet-vert-top sheet-pad-r-sm">
             <input class="sheet-center" type="number" name="attr_spell_attack_dmg_total" value="@{spell_attack_dmg_stat} + (@{spell_attack_dmg_bonus} * @{spell_toggle_bonuses})" disabled="disabled">
             <div class="sheet-small-label">Dmg Mod</div>
           </div>
-          <div class="sheet-col-11 sheet-toggle-attack sheet-toggle-damage sheet-border-right sheet-center sheet-vert-top sheet-pad-r-sm">
+          <div class="sheet-col-11 sheet-toggle-damage sheet-border-right sheet-center sheet-vert-top sheet-pad-r-sm">
             <input class="sheet-center" type="text" name="attr_spell_attack_dmg_type">
             <div class="sheet-small-label">
               <span class="sheet-en">Dmg Type</span>
@@ -434,15 +428,15 @@
               <span class="sheet-fr">Type de Dmg</span>
             </div>
           </div>
-          <div class="sheet-col-08 sheet-toggle-attack sheet-toggle-damage sheet-toggle-spell-higherlvl-query sheet-center sheet-vert-top sheet-pad-l-sm sheet-pad-r-sm">
+          <div class="sheet-col-08 sheet-toggle-damage sheet-toggle-spell-higherlvl-query sheet-center sheet-vert-top sheet-pad-l-sm sheet-pad-r-sm">
             <input class="sheet-center" type="number" name="attr_spell_attack_higher_level_dmg_dice" value="0">
             <div class="sheet-small-label">Higher Lvl<br>Dmg Dice</div>
           </div>
-          <div class="sheet-col-08 sheet-toggle-attack sheet-toggle-damage sheet-toggle-spell-higherlvl-query sheet-border-right sheet-center sheet-vert-top sheet-pad-l-sm sheet-pad-r-sm">
+          <div class="sheet-col-08 sheet-toggle-damage sheet-toggle-spell-higherlvl-query sheet-border-right sheet-center sheet-vert-top sheet-pad-l-sm sheet-pad-r-sm">
             <input class="sheet-center" type="text" name="attr_spell_attack_higher_level_dmg_die" value="d0">
             <div class="sheet-small-label">Higher Lvl<br>Dmg Die</div>
           </div>
-          <div class="sheet-col-07 sheet-toggle-attack sheet-toggle-damage sheet-toggle-second-damage sheet-center sheet-vert-top sheet-pad-l-sm sheet-pad-r-md">
+          <div class="sheet-col-07 sheet-toggle-damage sheet-toggle-second-damage sheet-center sheet-vert-top sheet-pad-l-sm sheet-pad-r-md">
             <input class="sheet-center" type="text" name="attr_spell_attack_second_dmg" value="0">
             <div class="sheet-small-label">2nd<br>
               <span class="sheet-en">Dmg Dice</span>
@@ -450,7 +444,7 @@
               <span class="sheet-fr">Dés de Dmg</span>
             </div>
           </div>
-          <div class="sheet-col-07 sheet-toggle-attack sheet-toggle-damage sheet-toggle-second-damage sheet-center sheet-vert-top sheet-pad-r-sm">
+          <div class="sheet-col-07 sheet-toggle-damage sheet-toggle-second-damage sheet-center sheet-vert-top sheet-pad-r-sm">
             <select name="attr_spell_attack_second_dmg_stat" class="sheet-select-no-arrow">
               <option value="0" selected>&#8212;</option>
               <option value="@{casting_stat}">Casting Stat</option>
@@ -465,15 +459,15 @@
             </select>
             <div class="sheet-small-label">2nd<br>Dmg Stat</div>
           </div>
-          <div class="sheet-col-04 sheet-toggle-attack sheet-toggle-damage sheet-toggle-second-damage sheet-toggle-bonuses sheet-center sheet-vert-top sheet-pad-r-sm">
+          <div class="sheet-col-04 sheet-toggle-damage sheet-toggle-second-damage sheet-toggle-bonuses sheet-center sheet-vert-top sheet-pad-r-sm">
             <input class="sheet-center" type="number" name="attr_spell_attack_second_dmg_bonus" value="0">
             <div class="sheet-small-label">2nd<br>+Dmg</div>
           </div>
-          <div class="sheet-col-06 sheet-toggle-attack sheet-toggle-damage sheet-toggle-second-damage sheet-center sheet-vert-top sheet-pad-r-sm">
+          <div class="sheet-col-06 sheet-toggle-damage sheet-toggle-second-damage sheet-center sheet-vert-top sheet-pad-r-sm">
             <input class="sheet-center" type="number" name="attr_spell_attack_second_dmg_total" value="@{spell_attack_second_dmg_stat} + (@{spell_attack_second_dmg_bonus} * @{spell_toggle_bonuses})" disabled="disabled">
             <div class="sheet-small-label">2nd<br>Dmg Mod</div>
           </div>
-          <div class="sheet-col-11 sheet-toggle-attack sheet-toggle-damage sheet-toggle-second-damage sheet-border-right sheet-center sheet-vert-top sheet-pad-r-sm">
+          <div class="sheet-col-11 sheet-toggle-damage sheet-toggle-second-damage sheet-border-right sheet-center sheet-vert-top sheet-pad-r-sm">
             <input class="sheet-center" type="text" name="attr_spell_attack_second_dmg_type">
             <div class="sheet-small-label">2nd<br>
               <span class="sheet-en">Dmg Type</span>
@@ -481,15 +475,15 @@
               <span class="sheet-fr">Type de Dmg</span>
             </div>
           </div>
-          <div class="sheet-col-08 sheet-toggle-attack sheet-toggle-damage sheet-toggle-second-damage sheet-toggle-spell-higherlvl-query sheet-center sheet-vert-top sheet-pad-l-sm sheet-pad-r-sm">
+          <div class="sheet-col-08 sheet-toggle-damage sheet-toggle-second-damage sheet-toggle-spell-higherlvl-query sheet-center sheet-vert-top sheet-pad-l-sm sheet-pad-r-sm">
             <input class="sheet-center" type="number" name="attr_spell_attack_second_higher_level_dmg_dice" value="0" placeholder="1">
             <div class="sheet-small-label">2nd<br>Higher Lvl<br>Dmg Dice</div>
           </div>
-          <div class="sheet-col-08 sheet-toggle-attack sheet-toggle-damage sheet-toggle-second-damage sheet-toggle-spell-higherlvl-query sheet-border-right sheet-center sheet-vert-top sheet-pad-l-sm sheet-pad-r-sm">
+          <div class="sheet-col-08 sheet-toggle-damage sheet-toggle-second-damage sheet-toggle-spell-higherlvl-query sheet-border-right sheet-center sheet-vert-top sheet-pad-l-sm sheet-pad-r-sm">
             <input class="sheet-center" type="text" name="attr_spell_attack_second_higher_level_dmg_die" value="0" placeholder="d6">
             <div class="sheet-small-label">2nd<br>Higher Lvl<br>Dmg Die</div>
           </div>
-          <div class="sheet-col-05 sheet-toggle-attack sheet-toggle-damage sheet-toggle-crit sheet-center sheet-vert-top sheet-pad-l-sm">
+          <div class="sheet-col-05 sheet-toggle-damage sheet-toggle-crit sheet-center sheet-vert-top sheet-pad-l-sm">
             <input class="sheet-center" type="number" name="attr_spell_attack_crit_range" value="20" step="1" min="1" max="20">
             <div class="sheet-small-label">Crit Range</div>
           </div>
