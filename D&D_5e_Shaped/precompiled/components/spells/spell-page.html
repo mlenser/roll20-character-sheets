@@ -17,16 +17,19 @@
         <span class="sheet-en">prepared</span>
         <span class="sheet-de">vorbereitete</span>
         <span class="sheet-fr">préparé</span>
+        <span class="sheet-pt-br">preparada</span>
       </span>
       <input type="checkbox" name="attr_spellritual" class="sheet-toggle-spells-prep-con-rit-ritual{{hidden_if_cantrip}}" value="{{spellritual=1}}"><span class="sheet-toggle-spells-prep-con-rit-ritual{{hidden_if_cantrip}}">
         <span class="sheet-en">ritual</span>
         <span class="sheet-de">rituale</span>
         <span class="sheet-fr">rituel</span>
+        <span class="sheet-pt-br">ritual</span>
       </span>
       <input type="checkbox" name="attr_spellconcentration" class="sheet-toggle-spells-prep-con-rit-concentration" value="{{spellconcentration=1}}"><span class="sheet-toggle-spells-prep-con-rit-concentration">
         <span class="sheet-en">concentration</span>
         <span class="sheet-de">konzentration</span>
         <span class="sheet-fr">concentration</span>
+        <span class="sheet-pt-br">concentração</span>
       </span>
       <input type="hidden" name="attr_spellcomponents_material_var" value="{{spell_components_material=@{spellcomponents}}}">
       <input type="checkbox" name="attr_spellcomponents_verbal" class="sheet-toggle-spell-vsm-v" value="@{spellcomponents_verbal_var}"><span class="sheet-toggle-spell-vsm-v">V</span>
@@ -46,6 +49,7 @@
             <span class="sheet-en">Range</span>
             <span class="sheet-de">Reichweite</span>
             <span class="sheet-fr">Portée</span>
+            <span class="sheet-pt-br">Alcance</span>
           </div>
         </div>
         <div class="sheet-col-10 sheet-center sheet-vert-middle sheet-pad-l-sm">
@@ -54,6 +58,7 @@
             <span class="sheet-en">Duration</span>
             <span class="sheet-de">Dauer</span>
             <span class="sheet-fr">Durée</span>
+            <span class="sheet-pt-br">Duração</span>
           </div>
         </div>
         <div class="sheet-spell-button-group sheet-right">
@@ -113,10 +118,24 @@
                 <option value="Transmutation">Transmutation</option>
               </select>
             </span>
+            <span class="sheet-pt-br">
+              <select name="attr_spellschool">
+                <option value="" selected>&#8212;</option>
+                <option value="Abjuration">Abjuração</option>
+                <option value="Conjuration">Invocação</option>
+                <option value="Divination">Divinação</option>
+                <option value="Enchantment">Encantamento</option>
+                <option value="Evocation">Evocação</option>
+                <option value="Illusion">Ilusão</option>
+                <option value="Necromancy">Necromancia</option>
+                <option value="Transmutation">Transmutação</option>
+              </select>
+            </span>
             <div class="sheet-small-label">
               <span class="sheet-en">School</span>
               <span class="sheet-de">Schule</span>
               <span class="sheet-fr">Ecole</span>
+              <span class="sheet-pt-br">Escola</span>
             </div>
           </div>
           <div class="sheet-col-20 sheet-center sheet-vert-middle sheet-pad-r-sm sheet-toggle-spell-vsm-m">
@@ -125,6 +144,7 @@
               <span class="sheet-en">Materials</span>
               <span class="sheet-de">Materialien</span>
               <span class="sheet-fr">Matériaux</span>
+              <span class="sheet-pt-br">Materiais</span>
             </div>
           </div>
           <div class="sheet-col-34 sheet-vert-middle sheet-pad-r-sm">
@@ -133,6 +153,7 @@
               <span class="sheet-en">Target</span>
               <span class="sheet-de">Ziel</span>
               <span class="sheet-fr">Cible</span>
+              <span class="sheet-pt-br">Alvo</span>
             </div>
           </div>
           <div class="sheet-col-34 sheet-vert-middle sheet-pad-r-sm">
@@ -141,6 +162,7 @@
               <span class="sheet-en">AoE</span>
               <span class="sheet-de">AoE</span>
               <span class="sheet-fr">Aire d'Effet</span>
+              <span class="sheet-pt-br">Area de Efeito</span>
             </div>
           </div>
         </div>
@@ -168,86 +190,103 @@
           <span class="sheet-en">Description</span>
           <span class="sheet-de">Beschreibung</span>
           <span class="sheet-fr">Description</span>
+          <span class="sheet-pt-br">Descrição</span>
         </span>
         <input type="checkbox" name="attr_spell_toggle_higher_lvl" class="sheet-toggle-spell-higherlvl" value="@{spell_var_higher_lvl}"><span class="sheet-toggle-spell-higherlvl">
           <span class="sheet-en">Higher Lvl</span>
           <span class="sheet-de">Höheren Stufen</span>
           <span class="sheet-fr">Niv Sup</span>
+          <span class="sheet-pt-br">Niv Sup</span>
         </span>
         <input type="checkbox" name="attr_spell_toggle_higher_lvl_query" class="sheet-toggle-spell-higherlvl-query" value="@{higher_level_query}"><span class="sheet-toggle-spell-higherlvl-query">
           <span class="sheet-en">Higher Lvl Query</span>
           <span class="sheet-de">Höheren Stufen Abfrage</span>
           <span class="sheet-fr">Jets Niveau Sup</span>
+          <span class="sheet-pt-br">Teste Niv Sup</span>
         </span>
         <input type="checkbox" name="attr_spell_toggle_output_higher_lvl_query" class="sheet-toggle-spell-output-higherlvl-query sheet-mar-t-md" value="@{spell_var_output_higher_lvl_query}"><span class="sheet-toggle-spell-output-higherlvl-query sheet-mar-t-md">
           <span class="sheet-en">Output</span>
           <span class="sheet-de">Ausgabe</span>
           <span class="sheet-fr">Affiché</span>
+          <span class="sheet-pt-br">Saída</span>
         </span>
         <input type="checkbox" name="attr_spell_toggle_emote" class="sheet-toggle-emote" value="@{spell_var_emote}"><span class="sheet-toggle-emote">
             <span class="sheet-en">Emote</span>
             <span class="sheet-de">Emote</span>
             <span class="sheet-fr">Emote</span>
+            <span class="sheet-pt-br">Emote</span>
           </span>
         <input type="checkbox" name="attr_spell_toggle_attack" class="sheet-toggle-attack" value="@{spell_var_attack}"><span class="sheet-toggle-attack">
           <span class="sheet-en">Attack</span>
           <span class="sheet-de">Angriff</span>
           <span class="sheet-fr">Attaque</span>
+          <span class="sheet-pt-br">Ataque</span>
         </span>
         <input type="checkbox" name="attr_spell_toggle_attack_damage" class="sheet-toggle-damage sheet-mar-t-md" value="@{spell_var_attack_damage}"><span class="sheet-toggle-damage sheet-mar-t-md">
           <span class="sheet-en">Dmg</span>
           <span class="sheet-de">Schad.</span>
           <span class="sheet-fr">Dmg</span>
+          <span class="sheet-pt-br">Dano</span>
         </span>
         <input type="checkbox" name="attr_spell_toggle_attack_crit" class="sheet-toggle-crit sheet-mar-t-lg" value="@{spell_var_attack_crit}" checked><span class="sheet-toggle-crit sheet-mar-t-lg">
           <span class="sheet-en">Crit</span>
           <span class="sheet-de">Crit</span>
           <span class="sheet-fr">Crit</span>
+          <span class="sheet-pt-br">Crit</span>
         </span>
         <input type="checkbox" name="attr_spell_toggle_attack_second_damage" class="sheet-toggle-second-damage sheet-mar-t-lg" value="@{spell_var_attack_second_damage}"><span class="sheet-toggle-second-damage sheet-mar-t-lg">
           <span class="sheet-en">Secondary</span>
           <span class="sheet-de">Secondary</span>
           <span class="sheet-fr">Secondaire</span>
+          <span class="sheet-pt-br">Secundário</span>
         </span>
         <input type="checkbox" name="attr_spell_toggle_save" class="sheet-toggle-save" value="@{spell_var_save}"><span class="sheet-toggle-save">
           <span class="sheet-en">Save</span>
           <span class="sheet-de">Rettung</span>
           <span class="sheet-fr">Sauv</span>
+          <span class="sheet-pt-br">Teste</span>
         </span>
         <input type="checkbox" name="attr_spell_toggle_save_damage" class="sheet-toggle-sv-damage sheet-mar-t-md" value="@{spell_var_save_damage}"><span class="sheet-toggle-sv-damage sheet-mar-t-md">
           <span class="sheet-en">Dmg</span>
           <span class="sheet-de">Schad.</span>
           <span class="sheet-fr">Dmg</span>
+          <span class="sheet-pt-br">Dano</span>
         </span>
         <input type="checkbox" name="attr_spell_toggle_save_second_damage" class="sheet-toggle-sv-second-damage sheet-mar-t-lg" value="@{spell_var_save_second_damage}"><span class="sheet-toggle-sv-damage sheet-toggle-sv-second-damage sheet-mar-t-lg">
           <span class="sheet-en">Secondary</span>
           <span class="sheet-de">Secondary</span>
           <span class="sheet-fr">Secondaire</span>
+          <span class="sheet-pt-br">Secundário</span>
         </span>
         <input type="checkbox" name="attr_spell_toggle_bonuses" class="sheet-toggle-bonuses" value="@{spell_var_bonuses}"><span class="sheet-toggle-bonuses">
           <span class="sheet-en">Bonuses</span>
           <span class="sheet-de">Bonuses</span>
           <span class="sheet-fr">Bonus</span>
+          <span class="sheet-pt-br">Bônus</span>
         </span>
         <input type="checkbox" name="attr_spell_toggle_healing" class="sheet-toggle-heal" value="@{spell_var_healing}"><span class="sheet-toggle-heal">
           <span class="sheet-en">Heal</span>
           <span class="sheet-de">Heilen</span>
           <span class="sheet-fr">Soins</span>
+          <span class="sheet-pt-br">Cura</span>
         </span>
         <input type="checkbox" name="attr_spell_toggle_effects" class="sheet-toggle-effects" value="@{spell_var_effects}"><span class="sheet-toggle-effects">
           <span class="sheet-en">Effects</span>
           <span class="sheet-de">Effekte</span>
           <span class="sheet-fr">Effets</span>
+          <span class="sheet-pt-br">Efeitos</span>
         </span>
         <input type="checkbox" name="attr_spell_toggle_source" class="sheet-toggle-spell-source" value="@{spell_var_source}"><span class="sheet-toggle-spell-source">
           <span class="sheet-en">Source</span>
           <span class="sheet-de">Quelle</span>
           <span class="sheet-fr">Source</span>
+          <span class="sheet-pt-br">Fonte</span>
         </span>
         <input type="checkbox" name="attr_spell_toggle_gained_from" class="sheet-toggle-spell-from" value="@{spell_var_gained_from}"><span class="sheet-toggle-spell-from">
           <span class="sheet-en">From</span>
           <span class="sheet-de">Von</span>
           <span class="sheet-fr">Origine</span>
+          <span class="sheet-pt-br">Origem</span>
         </span>
 
         <div class="sheet-shaped-row sheet-mar-b-md">
@@ -257,6 +296,7 @@
               <span class="sheet-en">Spell Description</span>
               <span class="sheet-de">Zauberbeschreibung</span>
               <span class="sheet-fr">Description du Sort</span>
+              <span class="sheet-pt-br">Descrição da Magia</span>
             </div>
           </div>
           <div class="sheet-col-1-3 sheet-toggle-spell-higherlvl sheet-center sheet-pad-l-sm">
@@ -265,6 +305,7 @@
               <span class="sheet-en">Higher Spell Slot</span>
               <span class="sheet-de">Höherer Zauberstufen</span>
               <span class="sheet-fr">Niveau Supérieur</span>
+              <span class="sheet-pt-br">Níveis Superiores</span>
             </div>
           </div>
         </div>
@@ -274,6 +315,7 @@
             <span class="sheet-en">Spell Emote</span>
             <span class="sheet-de">Zauber Emote</span>
             <span class="sheet-fr">Emote du Sort</span>
+            <span class="sheet-pt-br">Emote da Magia</span>
           </div>
         </div>
 
@@ -330,10 +372,28 @@
                 <option value="Other Source">Autre</option>
               </select>
             </div>
+            <div class="sheet-pt-br">
+              <select name="attr_spellgainedfrom">
+                <option value="Not Set">Não especificado</option>
+                <option value="Race">Raça</option>
+                <option value="Arcane Trickster">Trapaceiro Arcano</option>
+                <option value="Bard">Bardo</option>
+                <option value="Cleric">Clérigo</option>
+                <option value="Druid">Druída</option>
+                <option value="Eldritch Knight">Cavaleiro Arcano</option>
+                <option value="Paladin">Paladino</option>
+                <option value="Ranger">Patrulheiro</option>
+                <option value="Sorcerer">Feiticeiro</option>
+                <option value="Warlock">Bruxo</option>
+                <option value="Wizard">Mago</option>
+                <option value="Other Source">Outro</option>
+              </select>
+            </div>
             <div class="sheet-small-label">
               <span class="sheet-en">From</span>
               <span class="sheet-de">Von</span>
               <span class="sheet-fr">Origine</span>
+              <span class="sheet-pt-br">Origem</span>
             </div>
           </div>
           <div class="sheet-col-06 sheet-toggle-spell-source sheet-vert-middle sheet-pad-l-sm">
@@ -342,6 +402,7 @@
               <span class="sheet-en">Source</span>
               <span class="sheet-de">Quelle</span>
               <span class="sheet-fr">Source</span>
+              <span class="sheet-pt-br">Fonte</span>
             </div>
           </div>
         </div>
@@ -389,10 +450,25 @@
                 <option value="@{charisma_mod}">Cha</option>
               </select>
             </span>
+            <span class="sheet-pt-br">
+              <select name="attr_attackstat">
+                <option value="0">&#8212;</option>
+                <option value="@{casting_stat}" selected>Stat Lançamento de Magia</option>
+                <option value="@{second_casting_stat}">2º Stat de Lançamento</option>
+                <option value="@{finesse_mod}">Ágil</option>
+                <option value="@{strength_mod}">For</option>
+                <option value="@{dexterity_mod}">Des</option>
+                <option value="@{constitution_mod}">Con</option>
+                <option value="@{intelligence_mod}">Int</option>
+                <option value="@{wisdom_mod}">Sab</option>
+                <option value="@{charisma_mod}">Car</option>
+              </select>
+            </span>
             <div class="sheet-small-label">
               <span class="sheet-en">Atk Stat</span>
               <span class="sheet-de">Angriffsstatus</span>
               <span class="sheet-fr">Stat d'Atq</span>
+              <span class="sheet-pt-br">Stat do Atq</span>
             </div>
           </div>
           <div class="sheet-col-04 sheet-toggle-attack sheet-toggle-bonuses sheet-center sheet-vert-top sheet-pad-r-sm">
@@ -401,6 +477,7 @@
               <span class="sheet-en">+Atk</span>
               <span class="sheet-de">+Atk</span>
               <span class="sheet-fr">+Atq</span>
+              <span class="sheet-pt-br">+Atq</span>
             </div>
           </div>
           <div class="sheet-col-04 sheet-toggle-attack sheet-border-right sheet-center sheet-vert-top sheet-pad-r-sm">
@@ -409,6 +486,7 @@
               <span class="sheet-en">To Hit</span>
               <span class="sheet-de">To Hit</span>
               <span class="sheet-fr">Toucher</span>
+              <span class="sheet-pt-br">Acerto</span>
             </div>
           </div>
           <div class="sheet-col-08 sheet-toggle-damage sheet-center sheet-vert-top sheet-pad-l-sm sheet-pad-r-sm">
@@ -417,6 +495,7 @@
               <span class="sheet-en">Dmg Dice</span>
               <span class="sheet-de">Schadenswürfel</span>
               <span class="sheet-fr">Dés de Dmg</span>
+              <span class="sheet-pt-br">Dados de Dano</span>
             </div>
           </div>
           <div class="sheet-col-07 sheet-toggle-damage sheet-center sheet-vert-top sheet-pad-r-sm">
@@ -462,10 +541,25 @@
                 <option value="@{charisma_mod}">Cha</option>
               </select>
             </span>
+            <span class="sheet-pt-br">
+              <select name="attr_spell_attack_dmg_stat" class="sheet-select-no-arrow">
+                <option value="0" selected>&#8212;</option>
+                <option value="@{casting_stat}">Stat Lançamento de Magia</option>
+                <option value="@{second_casting_stat}">2º Stat Lançamento</option>
+                <option value="@{finesse_mod}">Ágil</option>
+                <option value="@{strength_mod}">For</option>
+                <option value="@{dexterity_mod}">Des</option>
+                <option value="@{constitution_mod}">Con</option>
+                <option value="@{intelligence_mod}">Int</option>
+                <option value="@{wisdom_mod}">Sab</option>
+                <option value="@{charisma_mod}">Car</option>
+              </select>
+            </span>
             <div class="sheet-small-label">
               <span class="sheet-en">Dmg Stat</span>
               <span class="sheet-de">Schad Stat</span>
               <span class="sheet-fr">Stat Dmg</span>
+              <span class="sheet-pt-br">Stat Dano</span>
             </div>
           </div>
           <div class="sheet-col-04 sheet-toggle-damage sheet-toggle-bonuses sheet-center sheet-vert-top sheet-pad-r-sm">
@@ -474,6 +568,7 @@
               <span class="sheet-en">+Dmg</span>
               <span class="sheet-de">+Schad</span>
               <span class="sheet-fr">+Dmg</span>
+              <span class="sheet-pt-br">+Dano</span>
             </div>
           </div>
           <div class="sheet-col-04 sheet-toggle-damage sheet-center sheet-vert-top sheet-pad-r-sm">
@@ -482,6 +577,7 @@
               <span class="sheet-en">Dmg Mod</span>
               <span class="sheet-de">Schad Mod</span>
               <span class="sheet-fr">Mod Dmg</span>
+              <span class="sheet-pt-br">Mod Dano</span>
             </div>
           </div>
           <div class="sheet-col-11 sheet-toggle-damage sheet-border-right sheet-center sheet-vert-top sheet-pad-r-sm">
@@ -490,6 +586,7 @@
               <span class="sheet-en">Dmg Type</span>
               <span class="sheet-de">Schadensart</span>
               <span class="sheet-fr">Type de Dmg</span>
+              <span class="sheet-pt-br">Tipo de Dano</span>
             </div>
           </div>
           <div class="sheet-col-08 sheet-toggle-damage sheet-toggle-spell-higherlvl-query sheet-center sheet-vert-top sheet-pad-l-sm sheet-pad-r-sm">
@@ -498,6 +595,7 @@
               <span class="sheet-en">Higher Lvl<br>Dmg Dice</span>
               <span class="sheet-de">Higher Lvl<br>Dmg Dice</span>
               <span class="sheet-fr">Niveau Sup<br>Nbr Dés Dmg</span>
+              <span class="sheet-pt-br">Nível Sup<br>Dados de Dano</span>
             </div>
           </div>
           <div class="sheet-col-08 sheet-toggle-damage sheet-toggle-spell-higherlvl-query sheet-border-right sheet-center sheet-vert-top sheet-pad-l-sm sheet-pad-r-sm">
@@ -506,6 +604,7 @@
               <span class="sheet-en">Higher Lvl<br>Dmg Die</span>
               <span class="sheet-de">Higher Lvl<br>Dmg Die</span>
               <span class="sheet-fr">Niveau Sup<br>Dé de Dmg</span>
+              <span class="sheet-pt-br">Nível Sup<br>Dado de Dano</span>
             </div>
           </div>
           <div class="sheet-col-07 sheet-toggle-damage sheet-toggle-second-damage sheet-center sheet-vert-top sheet-pad-l-sm sheet-pad-r-md">
@@ -514,6 +613,7 @@
               <span class="sheet-en">2nd<br>Dmg Dice</span>
               <span class="sheet-de">2nd<br>Schadenswürfel</span>
               <span class="sheet-fr">2ème<br>Dés de Dmg</span>
+              <span class="sheet-pt-br">2º<br>Dados de Dano</span>
             </div>
           </div>
           <div class="sheet-col-07 sheet-toggle-damage sheet-toggle-second-damage sheet-center sheet-vert-top sheet-pad-r-sm">
@@ -559,10 +659,25 @@
                 <option value="@{charisma_mod}">Cha</option>
               </select>
             </span>
+            <span class="sheet-pt-br">
+              <select name="attr_spell_attack_second_dmg_stat" class="sheet-select-no-arrow">
+                <option value="0" selected>&#8212;</option>
+                <option value="@{casting_stat}">Stat Lançamento de Magia</option>
+                <option value="@{second_casting_stat}">2º Stat Lançamento</option>
+                <option value="@{finesse_mod}">Ágil</option>
+                <option value="@{strength_mod}">For</option>
+                <option value="@{dexterity_mod}">Des</option>
+                <option value="@{constitution_mod}">Con</option>
+                <option value="@{intelligence_mod}">Int</option>
+                <option value="@{wisdom_mod}">Sab</option>
+                <option value="@{charisma_mod}">Car</option>
+              </select>
+            </span>
             <div class="sheet-small-label">
               <span class="sheet-en">2nd<br>Dmg Stat</span>
               <span class="sheet-de">2te<br>Schad Stat</span>
               <span class="sheet-fr">2ème<br>Stat Dmg</span>
+              <span class="sheet-pt-br">2º<br>Stat Dano</span>
             </div>
           </div>
           <div class="sheet-col-04 sheet-toggle-damage sheet-toggle-second-damage sheet-toggle-bonuses sheet-center sheet-vert-top sheet-pad-r-sm">
@@ -571,6 +686,7 @@
               <span class="sheet-en">2nd<br>+Dmg</span>
               <span class="sheet-de">2te<br>+Schad</span>
               <span class="sheet-fr">2ème<br>+Dmg</span>
+              <span class="sheet-pt-br">2º<br>+Dano</span>
             </div>
           </div>
           <div class="sheet-col-06 sheet-toggle-damage sheet-toggle-second-damage sheet-center sheet-vert-top sheet-pad-r-sm">
@@ -579,6 +695,7 @@
               <span class="sheet-en">2nd<br>Dmg Mod</span>
               <span class="sheet-de">2te<br>Schad Mod</span>
               <span class="sheet-fr">2ème<br>Mod Dmg</span>
+              <span class="sheet-pt-br">2º<br>Mod Dano</span>
             </div>
           </div>
           <div class="sheet-col-11 sheet-toggle-damage sheet-toggle-second-damage sheet-border-right sheet-center sheet-vert-top sheet-pad-r-sm">
@@ -587,6 +704,7 @@
               <span class="sheet-en">2nd<br>Dmg Type</span>
               <span class="sheet-de">2te<br>Schadensart</span>
               <span class="sheet-fr">2ème<br>Type de Dmg</span>
+              <span class="sheet-pt-br">2º<br>Tipo de Dano</span>
             </div>
           </div>
           <div class="sheet-col-08 sheet-toggle-damage sheet-toggle-second-damage sheet-toggle-spell-higherlvl-query sheet-center sheet-vert-top sheet-pad-l-sm sheet-pad-r-sm">
@@ -595,6 +713,7 @@
               <span class="sheet-en">2nd<br>Higher Lvl<br>Dmg Dice</span>
               <span class="sheet-de">2te<br>Higher Lvl<br>Dmg Dice</span>
               <span class="sheet-fr">2ème<br>Niveau Sup<br>Nbr Dés Dmg</span>
+              <span class="sheet-pt-br">2º<br>Níveis Sup<br>Dados Dano</span>
             </div>
           </div>
           <div class="sheet-col-08 sheet-toggle-damage sheet-toggle-second-damage sheet-toggle-spell-higherlvl-query sheet-border-right sheet-center sheet-vert-top sheet-pad-l-sm sheet-pad-r-sm">
@@ -603,6 +722,7 @@
               <span class="sheet-en">2nd<br>Higher Lvl<br>Dmg Die</span>
               <span class="sheet-de">2te<br>Higher Lvl<br>Dmg Die</span>
               <span class="sheet-fr">2ème<br>Niveau Sup<br>Dé de Dmg</span>
+              <span class="sheet-pt-br">2º<br>Níveis Sup<br>Dado Dano</span>
             </div>
           </div>
           <div class="sheet-col-05 sheet-toggle-damage sheet-toggle-crit sheet-center sheet-vert-top sheet-pad-l-sm">
@@ -611,6 +731,7 @@
               <span class="sheet-en">Crit Range</span>
               <span class="sheet-de">Crit Range</span>
               <span class="sheet-fr">Coup Crit</span>
+              <span class="sheet-pt-br">Crit Alcance</span>
             </div>
           </div>
         </div>
@@ -622,6 +743,7 @@
                 <span class="sheet-en">Save Condition</span>
                 <span class="sheet-de">Rettungszustand</span>
                 <span class="sheet-fr">Condition de Sauvgarde</span>
+                <span class="sheet-pt-br">Condição de Teste</span>
               </div>
             </div>
             <div class="sheet-col-07 sheet-center sheet-pad-r-sm">
@@ -655,10 +777,21 @@
                   <option value="Cha">Cha</option>
                 </select>
               </span>
+              <span class="sheet-pt-br">
+                <select name="attr_savestat">
+                  <option value="Str">For</option>
+                  <option value="Dex">Des</option>
+                  <option value="Con">Con</option>
+                  <option value="Int">Int</option>
+                  <option value="Wis">Sab</option>
+                  <option value="Cha">Car</option>
+                </select>
+              </span>
               <div class="sheet-small-label">
                 <span class="sheet-en">Save Stat</span>
                 <span class="sheet-de">Rettungsstatus</span>
                 <span class="sheet-fr">Stat de<br>Sauvgarde</span>
+                <span class="sheet-pt-br">Stat de<br>Teste</span>
               </div>
             </div>
             <div class="sheet-col-07 sheet-center sheet-pad-r-sm" title="Pick the class that the save DC will be created from or set your own DC by selecting custom here and then entering the DC in the next field">
@@ -746,10 +879,39 @@
                   <option value="0">DD Personalisé</option>
                 </select>
               </span>
+              <span class="sheet-pt-br">
+                <select name="attr_spellsavedc">
+                  <option value="0">&#8212;</option>
+                  <option value="@{casting_stat_dc}" selected>Stat Lançamento de Magia</option>
+                  <option value="@{second_casting_stat_dc}">2º Stat de Lançamento</option>
+                  <option value="@{strength_save_dc}">For</option>
+                  <option value="@{dexterity_save_dc}">Des</option>
+                  <option value="@{constitution_save_dc}">Con</option>
+                  <option value="@{intelligence_save_dc}">Int</option>
+                  <option value="@{wisdom_save_dc}">Sab</option>
+                  <option value="@{charisma_save_dc}">Car</option>
+                  <option class="select-dash" disabled>----</option>
+                  <option disabled>Todos os itens abaixo estão depreciados</option>
+                  <option class="select-dash" disabled>----</option>
+                  <option value="@{arcane_trickster_spell_dc}" disabled>Trapac. Arcano CD</option>
+                  <option value="@{bard_spell_dc}" disabled>Bardo CD</option>
+                  <option value="@{cleric_spell_dc}" disabled>Clérigo CD</option>
+                  <option value="@{druid_spell_dc}" disabled>Druída CD</option>
+                  <option value="@{eldritch_knight_spell_dc}" disabled>Caval. Arcano CD</option>
+                  <option value="@{monk_spell_dc}" disabled>Monge CD</option>
+                  <option value="@{paladin_spell_dc}" disabled>Paladino CD</option>
+                  <option value="@{ranger_spell_dc}" disabled>Ladino CD</option>
+                  <option value="@{sorcerer_spell_dc}" disabled>Feiticeiro CD</option>
+                  <option value="@{warlock_spell_dc}" disabled>Bruxo CD</option>
+                  <option value="@{wizard_spell_dc}" disabled>Mago CD</option>
+                  <option value="0">CD Personalizada</option>
+                </select>
+              </span>
               <div class="sheet-small-label">
                 <span class="sheet-en">Save DC Stat</span>
                 <span class="sheet-de">Rettungsstatus SG</span>
                 <span class="sheet-fr">Stat de Sauv du DD</span>
+                <span class="sheet-pt-br">Stat CD do Teste</span>
               </div>
             </div>
             <div class="sheet-col-04 sheet-toggle-bonuses sheet-center sheet-vert-top sheet-pad-r-sm">
@@ -758,6 +920,7 @@
                 <span class="sheet-en">+DC</span>
                 <span class="sheet-de">+SG</span>
                 <span class="sheet-fr">+DD</span>
+                <span class="sheet-pt-br">+CD</span>
               </div>
             </div>
             <div class="sheet-col-06 sheet-center sheet-vert-top sheet-pad-r-sm">
@@ -766,6 +929,7 @@
                 <span class="sheet-en">DC Total</span>
                 <span class="sheet-de">SG Total</span>
                 <span class="sheet-fr">DD Total</span>
+                <span class="sheet-pt-br">CD Total</span>
               </div>
             </div>
           </div>
@@ -776,6 +940,7 @@
                 <span class="sheet-en">On a failing save</span>
                 <span class="sheet-de">Bei scheitern Rettungswurf</span>
                 <span class="sheet-fr">En cas de sauvegarde ratée</span>
+                <span class="sheet-pt-br">Na falha do teste</span>
               </div>
             </div>
             <div class="sheet-col-30 sheet-center">
@@ -784,6 +949,7 @@
                 <span class="sheet-en">On a successful save</span>
                 <span class="sheet-de">Bei erfolgreichen Rettungswurf</span>
                 <span class="sheet-fr">En cas de sauvegarde réussie</span>
+                <span class="sheet-pt-br">No sucesso do teste</span>
               </div>
             </div>
           </div>
@@ -794,6 +960,7 @@
                 <span class="sheet-en">Dmg Dice</span>
                 <span class="sheet-de">Schadenswürfel</span>
                 <span class="sheet-fr">Dés de Dmg</span>
+                <span class="sheet-pt-br">Dados de Dano</span>
               </div>
             </div>
             <div class="sheet-col-07 sheet-toggle-sv-damage sheet-center sheet-vert-top sheet-pad-r-sm">
@@ -813,6 +980,7 @@
                 <span class="sheet-en">Dmg Stat</span>
                 <span class="sheet-de">Schad Stat</span>
                 <span class="sheet-fr">Stat Dmg</span>
+                <span class="sheet-pt-br">Stat Dano</span>
               </div>
             </div>
             <div class="sheet-col-04 sheet-toggle-sv-damage sheet-toggle-bonuses sheet-center sheet-vert-top sheet-pad-r-sm">
@@ -821,6 +989,7 @@
                 <span class="sheet-en">+Dmg</span>
                 <span class="sheet-de">+Schad</span>
                 <span class="sheet-fr">+Dmg</span>
+                <span class="sheet-pt-br">+Dano</span>
               </div>
             </div>
             <div class="sheet-col-04 sheet-toggle-sv-damage sheet-center sheet-vert-top sheet-pad-r-sm">
@@ -829,6 +998,7 @@
                 <span class="sheet-en">Dmg Mod</span>
                 <span class="sheet-de">Schad Mod</span>
                 <span class="sheet-fr">Mod Dmg</span>
+                <span class="sheet-pt-br">Mod Dano</span>
               </div>
             </div>
             <div class="sheet-col-11 sheet-toggle-sv-damage sheet-border-right sheet-center sheet-vert-top sheet-pad-r-sm">
@@ -837,6 +1007,7 @@
                 <span class="sheet-en">Dmg Type</span>
                 <span class="sheet-de">Schadensart</span>
                 <span class="sheet-fr">Type de Dmg</span>
+                <span class="sheet-pt-br">Tipo de Dano</span>
               </div>
             </div>
             <div class="sheet-col-08 sheet-toggle-sv-damage sheet-toggle-spell-higherlvl-query sheet-center sheet-vert-top sheet-pad-l-sm sheet-pad-r-sm">
@@ -845,6 +1016,7 @@
                 <span class="sheet-en">Higher Lvl<br>Dmg Dice</span>
                 <span class="sheet-de">Higher Lvl<br>Dmg Dice</span>
                 <span class="sheet-fr">Niveau Sup<br>Nbr Dés Dmg</span>
+                <span class="sheet-pt-br">Nível Sup<br>Dados Dano</span>
               </div>
             </div>
             <div class="sheet-col-08 sheet-toggle-sv-damage sheet-toggle-spell-higherlvl-query sheet-border-right sheet-center sheet-vert-top sheet-pad-l-sm sheet-pad-r-sm">
@@ -853,6 +1025,7 @@
                 <span class="sheet-en">Higher Lvl<br>Dmg Die</span>
                 <span class="sheet-de">Higher Lvl<br>Dmg Die</span>
                 <span class="sheet-fr">Niveau Sup<br>Dé de Dmg</span>
+                <span class="sheet-pt-br">Nível Sup<br>Dado Dano</span>
               </div>
             </div>
             <div class="sheet-col-07 sheet-toggle-sv-damage sheet-toggle-sv-second-damage sheet-center sheet-vert-top sheet-pad-l-sm sheet-pad-r-md">
@@ -861,6 +1034,7 @@
                 <span class="sheet-en">2nd<br>Dmg Dice</span>
                 <span class="sheet-de">2te<br>Schadenswürfel</span>
                 <span class="sheet-fr">2ème<br>Dés de Dmg</span>
+                <span class="sheet-pt-br">2º<br>Dados de Dano</span>
               </div>
             </div>
             <div class="sheet-col-07 sheet-toggle-sv-damage sheet-toggle-sv-second-damage sheet-center sheet-vert-top sheet-pad-r-sm">
@@ -880,6 +1054,7 @@
                 <span class="sheet-en">2nd<br>Dmg Stat</span>
                 <span class="sheet-de">2te<br>Dmg Stat</span>
                 <span class="sheet-fr">2ème<br>Dmg Stat</span>
+                <span class="sheet-pt-br">2º<br>Stat Dano</span>
               </div>
             </div>
             <div class="sheet-col-04 sheet-toggle-sv-damage sheet-toggle-sv-second-damage sheet-toggle-bonuses sheet-center sheet-vert-top sheet-pad-r-sm">
@@ -888,6 +1063,7 @@
                 <span class="sheet-en">2nd<br>+Dmg</span>
                 <span class="sheet-de">2te<br>+Schad</span>
                 <span class="sheet-fr">2ème<br>+Dmg</span>
+                <span class="sheet-pt-br">2º<br>+Dano</span>
               </div>
             </div>
             <div class="sheet-col-04 sheet-toggle-sv-damage sheet-toggle-sv-second-damage sheet-center sheet-vert-top sheet-pad-r-sm">
@@ -896,6 +1072,7 @@
                 <span class="sheet-en">2nd<br>Dmg Mod</span>
                 <span class="sheet-de">2te<br>Schad Mod</span>
                 <span class="sheet-fr">2ème<br>Mod Dmg</span>
+                <span class="sheet-pt-br">2º<br>Mod Dano</span>
               </div>
             </div>
             <div class="sheet-col-11 sheet-toggle-sv-damage sheet-toggle-sv-second-damage sheet-border-right sheet-center sheet-vert-top sheet-pad-r-sm">
@@ -904,6 +1081,7 @@
                 <span class="sheet-en">Dmg Type</span>
                 <span class="sheet-de">Schadensart</span>
                 <span class="sheet-fr">Type de Dmg</span>
+                <span class="sheet-pt-br">Tipo de Dano</span>
               </div>
             </div>
             <div class="sheet-col-08 sheet-toggle-sv-damage sheet-toggle-sv-second-damage sheet-toggle-spell-higherlvl-query sheet-center sheet-vert-top sheet-pad-l-sm sheet-pad-r-sm">
@@ -912,6 +1090,7 @@
                 <span class="sheet-en">2nd<br>Higher Lvl<br>Dmg Dice</span>
                 <span class="sheet-de">2te<br>Higher Lvl<br>Dmg Dice</span>
                 <span class="sheet-fr">2ème<br>Niveau Sup<br>Nbr Dés Dmg</span>
+                <span class="sheet-pt-br">2º<br>Nível Sup<br>Dados de Dano</span>
               </div>
             </div>
             <div class="sheet-col-08 sheet-toggle-sv-damage sheet-toggle-sv-second-damage sheet-toggle-spell-higherlvl-query sheet-center sheet-vert-top sheet-pad-l-sm">
@@ -920,6 +1099,7 @@
                 <span class="sheet-en">2nd<br>Higher Lvl<br>Dmg Die</span>
                 <span class="sheet-de">2te<br>Higher Lvl<br>Dmg Die</span>
                 <span class="sheet-fr">2ème<br>Niveau Sup<br>Dé de Dmg</span>
+                <span class="sheet-pt-br">2º<br>Nível Sup<br>Dado de Dano</span>
               </div>
             </div>
           </div>
@@ -931,6 +1111,7 @@
               <span class="sheet-en">Heal amount</span>
               <span class="sheet-de">Heilmenge</span>
               <span class="sheet-fr">Montant de Soins</span>
+              <span class="sheet-pt-br">Montante de Cura</span>
             </div>
           </div>
           <div class="sheet-col-08 sheet-center sheet-pad-r-sm">
@@ -939,6 +1120,7 @@
               <span class="sheet-en">Heal Bonus</span>
               <span class="sheet-de">Heilbonus</span>
               <span class="sheet-fr">Bonus de Soins</span>
+              <span class="sheet-pt-br">Bônus de Cura</span>
             </div>
           </div>
           <div class="sheet-col-07 sheet-center sheet-pad-r-sm">
@@ -984,10 +1166,25 @@
                 <option value="@{charisma_mod}">Cha</option>
               </select>
             </span>
+            <span class="sheet-pt-br">
+              <select name="attr_healstatbonus">
+                <option value="0">&#8212;</option>
+                <option value="@{casting_stat}" selected>Stat Lançamento de Magia</option>
+                <option value="@{second_casting_stat}">2º Stat de Lançamento</option>
+                <option value="@{finesse_mod}">Ágil</option>
+                <option value="@{strength_mod}">For</option>
+                <option value="@{dexterity_mod}">Des</option>
+                <option value="@{constitution_mod}">Con</option>
+                <option value="@{intelligence_mod}">Int</option>
+                <option value="@{wisdom_mod}">Sab</option>
+                <option value="@{charisma_mod}">Car</option>
+              </select>
+            </span>
             <div class="sheet-small-label">
               <span class="sheet-en">Stat Bonus</span>
               <span class="sheet-de">Statibonus</span>
               <span class="sheet-fr">Stat Bonus</span>
+              <span class="sheet-pt-br">Stat Bônus</span>
             </div>
           </div>
           <div class="sheet-col-08 sheet-toggle-spell-higherlvl-query sheet-border-left sheet-center sheet-vert-top sheet-pad-l-sm sheet-pad-r-sm">
@@ -996,6 +1193,7 @@
               <span class="sheet-en">Higher Lvl<br>Heal Amount</span>
               <span class="sheet-de">Higher Lvl<br>Heal Amount</span>
               <span class="sheet-fr">Niveau Sup<br>Montant de Soins</span>
+              <span class="sheet-pt-br">Nvl Sup<br>Montante de Cura</span>
             </div>
           </div>
           <div class="sheet-col-08 sheet-toggle-spell-higherlvl-query sheet-center sheet-vert-top sheet-pad-l-sm">
@@ -1004,6 +1202,7 @@
               <span class="sheet-en">Higher Lvl<br>Heal Dice</span>
               <span class="sheet-de">Higher Lvl<br>Heal Dice</span>
               <span class="sheet-fr">Niveau Sup<br>Nbr Dés Dmg</span>
+              <span class="sheet-pt-br">Nvl Sup<br>Dados de Cura</span>
             </div>
           </div>
           <div class="sheet-col-08 sheet-toggle-spell-higherlvl-query sheet-center sheet-vert-top sheet-pad-l-sm">
@@ -1012,6 +1211,7 @@
               <span class="sheet-en">Higher Lvl<br>Heal Die</span>
               <span class="sheet-de">Higher Lvl<br>Heal Die</span>
               <span class="sheet-fr">Niveau Sup<br>Dé de Dmg</span>
+              <span class="sheet-pt-br">Nvl Sup<br>Dado de Cura</span>
             </div>
           </div>
         </div>
@@ -1021,12 +1221,14 @@
             <span class="sheet-en">Spell Effects</span>
             <span class="sheet-de">Zaubereffekt</span>
             <span class="sheet-fr">Effets du Sort</span>
+            <span class="sheet-pt-br">Efeitos da Magia</span>
           </div>
         </div>
         <div class="sheet-wrap-box-title sheet-center">
           <span class="sheet-en">{{level_num_readable}}</span>
           <span class="sheet-de">{{level_num_readable_de}}</span>
           <span class="sheet-fr">{{level_num_readable_fr}}</span>
+          <span class="sheet-pt-br">{{level_num_readable_pt_br}}</span>
         </div>
       </div>
     </div>
