@@ -116,7 +116,7 @@
           <span class="sheet-en">Cantrips Known</span>
           <span class="sheet-de">Erlernte Zaubertricks</span>
           <span class="sheet-fr">Cantrips Connus</span>
-          <span class="sheet-ru">Трюков Известно</span>
+          <span class="sheet-ru">Трюков Всего</span>
         </div>
         <div class="sheet-col-07 sheet-vert-middle sheet-pad-r-sm"><input type="number" name="attr_cantrips_known_arcane_trickster" value="( (ceil((@{rogue_level}-2)/1e10)*3) + (ceil((@{rogue_level}-9)/1e10)) )" disabled="disabled"></div>
         <div class="sheet-col-07 sheet-vert-middle sheet-pad-r-sm"><input type="number" name="attr_cantrips_known_bard" value="( (ceil(@{bard_level}/1e10)*2) + (ceil((@{bard_level}-3)/1e10)) + (ceil((@{bard_level}-9)/1e10)) )" disabled="disabled"></div>
@@ -135,7 +135,7 @@
           <span class="sheet-en">Spells Known</span>
           <span class="sheet-de">Erlernte Zauber</span>
           <span class="sheet-fr">Sorts Connus</span>
-          <span class="sheet-ru">Заклинаний Известно</span>
+          <span class="sheet-ru">Заклятий Всего</span>
         </div>
         <div class="sheet-col-07 sheet-vert-middle sheet-pad-r-sm"><input type="number" name="attr_spells_known_arcane_trickster" value="( (ceil(@{rogue_level}/1e10)*3) +  (ceil((@{rogue_level}-3)/1e10)) + (ceil((@{rogue_level}-6)/1e10)) + (ceil((@{rogue_level}-7)/1e10)) + (ceil((@{rogue_level}-9)/1e10)) + (ceil((@{rogue_level}-10)/1e10)) + (ceil((@{rogue_level}-12)/1e10)) + (ceil((@{rogue_level}-13)/1e10)) + (ceil((@{rogue_level}-15)/1e10)) + (ceil((@{rogue_level}-18)/1e10)) + (ceil((@{rogue_level}-19)/1e10)) )" disabled="disabled"></div>
         <div class="sheet-col-07 sheet-vert-middle sheet-pad-r-sm"><input type="number" name="attr_spells_known_bard" value="( (ceil(@{bard_level}/1e10)*4) + (ceil((@{bard_level}-1)/1e10)) + (ceil((@{bard_level}-2)/1e10)) + (ceil((@{bard_level}-3)/1e10)) + (ceil((@{bard_level}-4)/1e10)) + (ceil((@{bard_level}-5)/1e10)) + (ceil((@{bard_level}-6)/1e10)) + (ceil((@{bard_level}-7)/1e10)) + (ceil((@{bard_level}-8)/1e10)) + (ceil((@{bard_level}-9)/1e10)*2) + (ceil((@{bard_level}-10)/1e10)) + (ceil((@{bard_level}-12)/1e10)) + (ceil((@{bard_level}-13)/1e10)*2) + (ceil((@{bard_level}-14)/1e10)) + (ceil((@{bard_level}-16)/1e10)) + (ceil((@{bard_level}-17)/1e10)*2) )" disabled="disabled"></div>
@@ -468,7 +468,7 @@
     <span class="sheet-en">prepared</span>
     <span class="sheet-de">vorbereitete</span>
     <span class="sheet-fr">préparé</span>
-    <span class="sheet-ru">подготовлено</span>
+    <span class="sheet-ru">подгот.</span>
   </span>
   <input type="checkbox" name="attr_spell_only_show_rituals" class="sheet-toggle-spells-filter-ritual"><span class="sheet-toggle-spells-filter-ritual">
     <span class="sheet-en">ritual</span>
@@ -477,7 +477,7 @@
     <span class="sheet-ru">ритуал</span>
   </span>
 
-  <input type="radio" name="attr_spell_casting_time_only_show" class="sheet-toggle-spells-filter-casting-time-any" value="any" checked><span class="sheet-toggle-spells-filter-casting-time-any"><span class="sheet-en">any</span><span class="sheet-de">any</span><span class="sheet-fr">tout</span><span class="sheet-ru">any</span></span><input type="radio" name="attr_spell_casting_time_only_show" class="sheet-toggle-spells-filter-casting-time-reaction" value="reaction"><span class="sheet-toggle-spells-filter-casting-time-reaction sheet-border-left">reaction</span><input type="radio" name="attr_spell_casting_time_only_show" class="sheet-toggle-spells-filter-casting-time-bonus" value="bonus"><span class="sheet-toggle-spells-filter-casting-time-bonus sheet-border-left">bonus</span><input type="radio" name="attr_spell_casting_time_only_show" class="sheet-toggle-spells-filter-casting-time-action" value="action"><span class="sheet-toggle-spells-filter-casting-time-action sheet-border-left">action</span><input type="radio" name="attr_spell_casting_time_only_show" class="sheet-toggle-spells-filter-casting-time-minute" value="minute"><span class="sheet-toggle-spells-filter-casting-time-minute sheet-border-left">1 min</span><input type="radio" name="attr_spell_casting_time_only_show" class="sheet-toggle-spells-filter-casting-time-longer" value="longer"><span class="sheet-toggle-spells-filter-casting-time-longer sheet-border-left"><span class="sheet-en">longer</span><span class="sheet-de">longer</span><span class="sheet-fr">perso</span><span class="sheet-ru">longer</span></span>
+  <input type="radio" name="attr_spell_casting_time_only_show" class="sheet-toggle-spells-filter-casting-time-any" value="any" checked><span class="sheet-toggle-spells-filter-casting-time-any"><span class="sheet-en">any</span><span class="sheet-de">any</span><span class="sheet-fr">tout</span><span class="sheet-ru">any</span></span><input type="radio" name="attr_spell_casting_time_only_show" class="sheet-toggle-spells-filter-casting-time-reaction" value="reaction"><span class="sheet-toggle-spells-filter-casting-time-reaction sheet-border-left">reaction</span><input type="radio" name="attr_spell_casting_time_only_show" class="sheet-toggle-spells-filter-casting-time-bonus" value="bonus"><span class="sheet-toggle-spells-filter-casting-time-bonus sheet-border-left">bonus</span><input type="radio" name="attr_spell_casting_time_only_show" class="sheet-toggle-spells-filter-casting-time-action" value="action"><span class="sheet-toggle-spells-filter-casting-time-action sheet-border-left">action</span><input type="radio" name="attr_spell_casting_time_only_show" class="sheet-toggle-spells-filter-casting-time-minute" value="minute"><span class="sheet-toggle-spells-filter-casting-time-minute sheet-border-left">1 min</span><input type="radio" name="attr_spell_casting_time_only_show" class="sheet-toggle-spells-filter-casting-time-longer" value="longer"><span class="sheet-toggle-spells-filter-casting-time-longer sheet-border-left"><span class="sheet-en">longer</span><span class="sheet-de">longer</span><span class="sheet-fr">perso</span><span class="sheet-ru"></span></span>
 
   <span class="sheet-spells-filter sheet-vert-top sheet-border-left sheet-pad-l-md sheet-mar-l-sm">
     <span class="sheet-en">Spell can have:</span>
