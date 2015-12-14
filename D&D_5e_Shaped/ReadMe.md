@@ -23,6 +23,22 @@ Long term:
 
 ### Changelog
 
+**November 19th 2015**
+
+* Bind to without chat avatars
+
+**November 16th 2015**
+
+* Add Halfling to NPC Actions
+
+**November 15th 2015**
+
+* Russian Indentation fixes
+
+**October 30th 2015**
+
+* Added Russian
+
 **October 24th 2015**
 
 * Added a setting for changing the passive skill base (instead of 10)
