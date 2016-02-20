@@ -1,6 +1,6 @@
 {
   "name": "dnd_5e_shaped_character_sheet",
-  "version": "",
+  "version": "2.0.15",
   "bin": "./",
   "description": "D&D 5e Shaped character sheet on Roll20.net",
   "main": "gulpfile.js",
@@ -16,14 +16,17 @@
     "gulp-rename": "^1.2.2",
     "gulp-replace-task": "^0.11.0",
     "gulp-sass": "^2.1.1",
+    "gulp-sass-lint": "^1.1.1",
     "gulp-uglify": "^1.5.1",
-    "gulp-wrap": "^0.11.0"
+    "jshint": "^2.9.1",
+    "gulp-jshint": "^2.0.0",
+    "jshint-stylish": "^2.1.0"
   },
   "scripts": {},
   "repository": {
     "type": "git",
     "url": "https://github.com/mlenser/roll20-character-sheets/tree/master/D%26D_5e_Shaped"
   },
-  "author": "",
+  "author": "Mark Lenser (Kryx)",
   "license": "ISC"
 }
