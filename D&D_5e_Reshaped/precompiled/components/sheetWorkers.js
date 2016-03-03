@@ -1,4 +1,4 @@
-var currentVersion = '2.1.14';
+var currentVersion = '2.1.15';
 var skills = {
 	abilities: {
 		'acrobatics': 'dexterity',
@@ -1306,6 +1306,7 @@ on('change:weight_attacks change:weight_armor change:weight_equipment change:wei
 	updateWeight();
 });
 
+
 on('change:repeating_attack', function (eventInfo) {
 	var changedField = getRepeatingField('repeating_attack', eventInfo);
 	if (changedField !== 'toggle_details' && changedField !== 'to_hit' && changedField !== 'attack_formula' && changedField !== 'damage_formula' && changedField !== 'second_damage_formula' && changedField !== 'damage_string' && changedField !== 'saving_throw_dc' && changedField !== 'parsed') {
@@ -1785,7 +1786,7 @@ function updateAttack (rowId) {
 		getAttrs(collectionArray, function (v) {
 			for (var j = 0; j < ids.length; j++) {
 				var repeatingString = repeatingItem + '_' + ids[j] + '_';
-
+				finalSetAttrs[repeatingString + 'attack_id'] = ids[j];
 				var attackName = v[repeatingString + 'name'];
 				if (isUndefined(attackName)) {
 					return;
@@ -3534,6 +3535,9 @@ function sheetOpened () {
 		}
 		if (versionCompare(version, '2.1.14') < 0) {
 			updateLevels();
+		}
+		if (versionCompare(version, '2.1.15') < 0) {
+			updateAttack();
 		}
 
 		if (!version || version !== currentVersion) {
