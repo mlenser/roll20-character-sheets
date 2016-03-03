@@ -9,8 +9,9 @@
       <input type="hidden" name="attr_modifiers" accept="Modifiers">
       <input type="hidden" name="attr_properties" accept="Properties">
       <input type="hidden" name="attr_weight" accept="Weight">
+      <input type="hidden" name="attr_attack_id">
       <button type="roll" name="roll_attack"
-              value="@{output_option}   &{template:5e-shaped}   {{character_name=@{character_name}}}   @{show_character_name}   {{title=@{name}}}   {{action=1}}   {{reach=@{reach}}}   {{range=@{range}}}   {{ammo=@{ammo}}}   {{targetName=@{attacks_vs_target_name}}}   @{roll_toggle}   @{saving_throw_toggle}   @{damage_toggle}   @{second_damage_toggle}   @{extras_toggle}    @{attacher_attack}   @{hide_gm_info}">
+              value="@{output_option}   &{template:5e-shaped}   {{character_name=@{character_name}}} {{attack_id=@{attack_id}}}  @{show_character_name}   {{title=@{name}}}   {{action=1}}   {{reach=@{reach}}}   {{range=@{range}}}   {{ammo=@{ammo}}}   {{targetName=@{attacks_vs_target_name}}}   @{roll_toggle}   @{saving_throw_toggle}   @{damage_toggle}   @{second_damage_toggle}   @{extras_toggle}    @{attacher_attack}   @{hide_gm_info} ">
         <div class="shaped-row vert-center">
           <div class="col-35 pad-r-sm">
             <input type="text" name="attr_name" readonly>
