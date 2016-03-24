@@ -1103,7 +1103,7 @@ const setClassFeatures = () => {
 
       if (v.barbarian_level >= 2) {
         setClassFeature({
-          freetext: translate(language, 'CLASS_FEATURES.RECKLESS_ATTACK'),
+          freetext: translate(language, 'CLASS_FEATURES.RECKLESS_ATTACK_TEXT'),
           name: translate(language, 'CLASS_FEATURES.RECKLESS_ATTACK'),
           storageName: 'Reckless Attack',
         });
@@ -1429,8 +1429,20 @@ const setClassFeatures = () => {
         } else {
           unarmoredMovementFeet = 10;
         }
+        let unarmoredMovementMeter;
+        if (v.monk_level >= 18) {
+          unarmoredMovementMeter = 9;
+        } else if (v.monk_level >= 14) {
+          unarmoredMovementMeter = 7.5;
+        } else if (v.monk_level >= 10) {
+          unarmoredMovementMeter = 6;
+        } else if (v.monk_level >= 6) {
+          unarmoredMovementMeter = 4.5;
+        } else {
+          unarmoredMovementMeter = 3;
+        }
         setTrait({
-          freetext: translate(language, 'CLASS_FEATURES.UNARMORED_MOVEMENT_TEXT').replace('UNARMORED_MOVEMENT_FEET', unarmoredMovementFeet),
+          freetext: translate(language, 'CLASS_FEATURES.UNARMORED_MOVEMENT_TEXT').replace('UNARMORED_MOVEMENT_FEET', unarmoredMovementFeet).replace('UNARMORED_MOVEMENT_METER', unarmoredMovementMeter),
           name: translate(language, 'CLASS_FEATURES.UNARMORED_MOVEMENT'),
           storageName: 'Unarmored Movement',
         });
@@ -1576,15 +1588,21 @@ const setClassFeatures = () => {
         } else {
           auraRange = 10;
         }
+        let auraRangeMeter;
+        if (v.paladin_level >= 18) {
+          auraRangeMeter = 9;
+        } else {
+          auraRangeMeter = 3;
+        }
         setTrait({
-          freetext: translate(language, 'CLASS_FEATURES.AURA_OF_PROTECTION_TEXT').replace('AURA_RANGE', auraRange),
+          freetext: translate(language, 'CLASS_FEATURES.AURA_OF_PROTECTION_TEXT').replace('AURA_RANGE', auraRange).replace('AURA_RANGE_METER', auraRangeMeter),
           name: translate(language, 'CLASS_FEATURES.AURA_OF_PROTECTION'),
           storageName: 'Aura of Protection',
         });
 
         if (v.paladin_level >= 10) {
           setTrait({
-            freetext: translate(language, 'CLASS_FEATURES.AURA_OF_COURAGE_TEXT').replace('AURA_RANGE', auraRange),
+            freetext: translate(language, 'CLASS_FEATURES.AURA_OF_COURAGE_TEXT').replace('AURA_RANGE', auraRange).replace('AURA_RANGE_METER', auraRangeMeter),
             name: translate(language, 'CLASS_FEATURES.AURA_OF_COURAGE'),
             storageName: 'Aura of Courage',
           });
