@@ -11,6 +11,11 @@ Bugs fall into the patch category.
 
 The sheet will always upgrade itself unless I specify otherwise, though some things like roll template fields changing will require users who have added custom macros to fix.
 
+## 19.3.1
+
+### Features
+- [#787: Default Copper Value is wrong.](https://bitbucket.org/mlenser/5eshaped/issues/787/default-copper-value-is-wrong)
+
 ## 19.3.0
 
 ### Features
