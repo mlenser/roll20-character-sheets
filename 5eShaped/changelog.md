@@ -11,6 +11,11 @@ Bugs fall into the patch category.
 
 The sheet will always upgrade itself unless I specify otherwise, though some things like roll template fields changing will require users who have added custom macros to fix.
 
+## 19.4.0
+
+### Features
+- [#796: Support new Roll20 cantrip damage](https://bitbucket.org/mlenser/5eshaped/issues/796/support-new-roll20-cantrip-damage)
+
 ## 19.3.1
 
 ### Features
